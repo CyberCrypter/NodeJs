@@ -4,9 +4,11 @@ const fs = require('fs')
 // const os = require('os')
 // const url = require('url')
 // const crypto = require('crypto')
-const sayHello = require('./greeting')
-const math = require('./math')
-const lodash = require('lodash')
+// const sayHello = require('./greeting')
+// const math = require('./math')
+// const lodash = require('lodash')
+const readline = require('readline')
+
 
 /*read file from file system*/
 
@@ -114,6 +116,7 @@ writableStream.on('finish',()=>{
 })
 */
 
+/*
 const readableStream = fs.createReadStream('example.txt',{encoding:'utf-8'})
 
 
@@ -125,3 +128,5 @@ writableStream.on('finish',()=>{
     console.log("finished writing to file");
     
 })
+*/
+
