@@ -103,7 +103,7 @@ console.log(hash.digest('hex'));
 //     console.error('error',err);
 // })
 
-
+/*
 const writableStream = fs.createWriteStream('output2.txt')
 
 writableStream.write('Hello ')
@@ -112,5 +112,16 @@ writableStream.end('!')
 writableStream.on('finish',()=>{
     console.log("finished writing to file");
 })
+*/
+
+const readableStream = fs.createReadStream('example.txt',{encoding:'utf-8'})
 
 
+const writableStream = fs.createWriteStream('example-output.txt')
+
+readableStream.pipe(writableStream)
+
+writableStream.on('finish',()=>{
+    console.log("finished writing to file");
+    
+})
